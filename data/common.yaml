@@ -1,0 +1,25 @@
+---
+# some data for the test manifest
+
+# do nothing function
+pfunc::nope: "%{lookup('pfunc::testparams::nope||pfunc::nope')}"
+#                        ^                        ^
+#                        |                        L fully qualified puppet function
+#                        L parameters to lookup
+pfunc::testparams::nope: 'test for doing nothing'
+
+# split a string
+pfunc::split: "%{alias('pfunc::testparams::split||pfunc::split')}"
+pfunc::testparams::split:
+   - ','
+   - 'split,me,on,comma'
+
+# join an array
+pfunc::join: "%{lookup('pfunc::testparams::join||pfunc::join')}"
+pfunc::testparams::join:
+  - ','
+  - ['join','me','with','comma']
+
+# print an integer in hex format
+pfunc::hex: "%{lookup('pfunc::testparams::hex||pfunc::hex')}"
+pfunc::testparams::hex: 42

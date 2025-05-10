@@ -1,0 +1,14 @@
+---
+version: 5
+
+defaults:
+  datadir: 'data'
+  data_hash: 'yaml_data'
+
+hierarchy:
+  - name: 'pfunc run puppet function as hiera lookups'
+    lookup_key: pfunc_lookup
+
+  - name: 'module common'
+    path: 'common.yaml'
+
