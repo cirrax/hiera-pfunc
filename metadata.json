@@ -1,0 +1,44 @@
+{
+  "name": "cirrax-pfunc",
+  "version": "0.0.0",
+  "author": "Cirrax GmbH",
+  "summary": "hiera function",
+  "license": "GPL-3.0",
+  "source": "https://github.com/cirrax/hiera-pfunc",
+  "project_page": "https://github.com/cirrax/hiera-pfunc",
+  "issues_url": "https://github.com/cirrax/hiera-pfunc/issues",
+  "dependencies": [
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "11",
+        "12",
+        "13"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "24.04"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "8",
+        "9"
+      ]
+    },
+  "requirements": [
+    {
+      "name": "openvox",
+      "version_requirement": ">=5.0.0 < 9.0.0"
+    }
+  ],
+  "tags": [
+    "hiera",
+    "function"
+  ]
+}
