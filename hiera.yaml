@@ -11,4 +11,3 @@ hierarchy:
 
   - name: 'module common'
     path: 'common.yaml'
-

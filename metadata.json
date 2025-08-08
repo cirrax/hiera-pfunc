@@ -30,7 +30,8 @@
         "8",
         "9"
       ]
-    },
+    }
+  ],
   "requirements": [
     {
       "name": "openvox",

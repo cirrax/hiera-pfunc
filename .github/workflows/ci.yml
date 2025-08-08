@@ -27,7 +27,7 @@ jobs:
       - name: run validate
         run: |
           podman run -it --rm -v $PWD:/repo:Z ${VOXBOX} validate
-      - name: run check 
+      - name: run check
         run: |
           podman run -it --rm -v $PWD:/repo:Z ${VOXBOX} check
       - name: run lint

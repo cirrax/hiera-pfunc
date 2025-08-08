@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 #
 # @since 5.0.0
 #
 Puppet::Functions.create_function(:pfunc_lookup) do
-
   dispatch :pfunc_lookup do
     param 'Variant[String, Numeric]', :key
     param 'Hash', :options
@@ -11,17 +12,17 @@ Puppet::Functions.create_function(:pfunc_lookup) do
 
   def pfunc_lookup(key, options, context)
     # we only can handle lookups in specified format. so return
-    # imediatly if it does not fit '.*||.*' 
-    unless key.match?(/\|\|/)
+    # imediatly if it does not fit '.*||.*'
+    unless key.match?(%r{\|\|})
       context.not_found
       return
     end
 
     # use cache:
     return context.cached_value(key) if context.cache_has_key(key)
- 
+
     param, func = key.split('||')
-    
+
     # pandoras box: call puppet from hiera !!!!!!!
     result =  call_function(func, *lookup_in_hiera(options, context, param))
 
@@ -29,12 +30,11 @@ Puppet::Functions.create_function(:pfunc_lookup) do
     context.cache(key, result)
   end
 
-  def lookup_in_hiera(options, context, lkup)
+  def lookup_in_hiera(_options, context, lkup)
     # lookup the parameter in hiera
     lookedup = context.interpolate("%{alias('#{lkup}')}")
-    if lookedup.to_s.empty?
-      raise ArgumentError, "pfunc_lookup hiera backend: could not lookup a value for #{lkup} in hiera"
-    end
+    raise ArgumentError, "pfunc_lookup hiera backend: could not lookup a value for #{lkup} in hiera" if lookedup.to_s.empty?
+
     lookedup
   end
 end
