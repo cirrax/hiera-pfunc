@@ -1,14 +1,13 @@
 {
   "name": "cirrax-pfunc",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Cirrax GmbH",
   "summary": "hiera function",
   "license": "GPL-3.0",
   "source": "https://github.com/cirrax/hiera-pfunc",
   "project_page": "https://github.com/cirrax/hiera-pfunc",
   "issues_url": "https://github.com/cirrax/hiera-pfunc/issues",
-  "dependencies": [
-  ],
+  "dependencies": [],
   "operatingsystem_support": [
     {
       "operatingsystem": "Debian",
