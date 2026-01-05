@@ -26,7 +26,7 @@ This is a hiera backend to call puppet functions from hiera.
 * use ```alias``` instead of ```lookup``` for puppet functions with a non String return value
 * for a demo you can use ```include pfunc``` which will execute certain functions (from common.yaml) and notify the result
 * I advice using this backend with a high priority to avid overwrite function results in the hierarchy
-* lookup_options specifying merge behaviours are supported. 
+* lookup_options specifying merge behaviours are supported.
 
 ## Limitations
 This hiera backend uses caching of function results. So functions that are non deterministic (such as generating a random string) will not work as expected.
