@@ -36,25 +36,29 @@ The following parameters are available in the `pfunc` class:
 
 Data type: `Any`
 
-
+result of the pfunc::nope function to print out
+see data/common.yaml for the function call
 
 ##### <a name="-pfunc--split"></a>`split`
 
 Data type: `Array`
 
-
+result of the pfunc::split function to print out
+see data/common.yaml for the function call
 
 ##### <a name="-pfunc--join"></a>`join`
 
 Data type: `String`
 
-
+result of the pfunc::join function to print out
+see data/common.yaml for the function call
 
 ##### <a name="-pfunc--hex"></a>`hex`
 
 Data type: `String`
 
-
+result of the pfunc::hex function to print out
+see data/common.yaml for the function call
 
 ## Functions
 
