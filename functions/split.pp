@@ -5,6 +5,8 @@
 #   the string we like to split
 # @param str
 #   the string we use to split on (default ',')
+# @return
+#   the splitted array
 function pfunc::split(String $v,String $str = ',') >> Array {
   $v.split($str)
 }

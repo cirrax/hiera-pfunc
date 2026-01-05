@@ -38,15 +38,11 @@ Data type: `Any`
 
 
 
-Default value: `'default'`
-
 ##### <a name="-pfunc--split"></a>`split`
 
 Data type: `Array`
 
 
-
-Default value: `['default']`
 
 ##### <a name="-pfunc--join"></a>`join`
 
@@ -54,15 +50,11 @@ Data type: `String`
 
 
 
-Default value: `'default'`
-
 ##### <a name="-pfunc--hex"></a>`hex`
 
 Data type: `String`
 
 
-
-Default value: `'default'`
 
 ## Functions
 
@@ -155,7 +147,7 @@ split a string into an Array
 
 split a string into an Array
 
-Returns: `Array`
+Returns: `Array` the splitted array
 
 ##### `v`
 

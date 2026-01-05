@@ -10,6 +10,21 @@ Puppet::Functions.create_function(:pfunc_lookup) do
     param 'Puppet::LookupContext', :context
   end
 
+  #
+  # hiera lookup function that calls a puppet function
+  #
+  # @param key
+  #   the key to lookup, format must be:
+  #     parameter||function
+  #   while parameter is a Array of the parameters to use for
+  #   calling the function. function is the fully qualified
+  #   function name, like you use it in any manifest
+  # @param options
+  #   hash of options (unused)
+  # @param context
+  #   the lookup context
+  # @return
+  #   the result of the executed puppet function
   def pfunc_lookup(key, options, context)
     # we only can handle lookups in specified format. so return
     # imediatly if it does not fit '.*||.*'
